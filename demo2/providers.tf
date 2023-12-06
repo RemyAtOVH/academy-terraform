@@ -22,7 +22,11 @@ provider "openstack" {
 # Configure the OVHcloud Provider
 provider "ovh" {
   endpoint           = "ovh-eu" # Endpoint of the provider
-  application_key    = "bf6eeec86243c8aa"
-  application_secret = "2587b5e3050f7a72137f480aee556af1"
-  consumer_key       = "8cd8038c6e539d062285ca8daa6d7335"
+  # Replace these credentials by your own
+  # issued on https://eu.api.ovh.com/createToken
+  application_key    = "<your_application_key>"
+  application_secret = "<your_application_secret>"
+  consumer_key       = "<your_consumer_key>"
+  # But remember it is a bad habit to store this here
+  # Better to use ENV VARS, or variables
 }
